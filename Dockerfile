@@ -8,4 +8,5 @@ RUN apk add --update git && \
 FROM scratch
 USER 1000
 COPY --from=builder /build/app .
+COPY --from=builder /build/quiz.csv .
 CMD ["./app"]
